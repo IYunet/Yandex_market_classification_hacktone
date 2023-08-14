@@ -36,3 +36,32 @@
 
 В файле `datasets/create_new_csv.ipynb`- код процесса формирование путей для картинок в облаке
 
+# Запуск модели для классификации на фото и инфографику
+
+- `Можно локально запустить файл main.py`
+- `Или через Docker`
+
+## Запуск через Docker
+
+Если arm архитектура процессора, то: `docker build --platform=linux/amd64 -t YOUR_NAME .`
+
+Иначе: `docker build -t YOUR_NAME .`
+
+## Теперь запускаем
+
+Если arm архитектура процессора, то: `docker run -it --rm --name my-flask-app -p 2345:YOUR_PORT YOUR_NAME`
+
+Иначе: `docker run -it --rm --platform=linux/amd64 --name my-flask-app -p 2345:YOUR_PORT YOUR_NAME`
+
+## Пример сборки на ARM:
+`docker build --platform=linux/amd64 -t my-model .`
+
+`docker run -it --rm --platform=linux/amd64 --name my-flask-app -p 2345:2345 my-model`
+
+В `datasets/original_df_for_binary.csv` можно найти ссылки на фотки и протестировать модель
+
+Пример ссылки на фото: `avatars.mds.yandex.net/get-marketpic/8447408/picf59511c785f4cec0ee964ebdd0d44584/orig`
+
+Нужно ее подставить в `?link=`
+
+Пример запроса: `https://localhost:2345/predict/?link=avatars.mds.yandex.net/get-marketpic/8447408/picf59511c785f4cec0ee964ebdd0d44584/orig`
