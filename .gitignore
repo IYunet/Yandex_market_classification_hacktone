@@ -335,3 +335,42 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# Папки и файлы, которые можно игнорировать в проектах PyCharm
+
+# Игнорировать файлы настроек IDE
+.idea/
+
+# Игнорировать файлы кэша
+__pycache__/
+*.pyc
+*.pyo
+
+# Игнорировать виртуальное окружение
+venv/
+env/
+
+# Игнорировать файлы журналов и отчетов об ошибках
+*.log
+logs/
+log/
+logs.txt
+
+# Игнорировать временные файлы и папки
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Игнорировать файлы конфигурации редактора
+*.iml
+*.ipr
+*.iws
+*.idea/
+
+# Игнорировать файлы автодополнения
+*.pycharm_workspace
+
+# Игнорировать файлы настроек пользователя
+/.idea/
+
+
