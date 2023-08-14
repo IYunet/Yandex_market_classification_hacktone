@@ -23,11 +23,12 @@
 
 В папке `datasets` лежат следующие датасеты:
 
-- `datasets/data.csv` - оригинальный датасет с разметкой
+- `datasets/data.csv` - оригинальный датасет с разметкой (немного отформатирован)
 - `datasets/data_correct.csv` - пути к картинкам в DataSphere и их разметка
 - `datasets/data_for_binary.csv` - для обучение бинарной классификации: `фото с инфографикой` или фото `без инфографики`
 - `datasets/data_for_infographics.csv`- для определение типа инфографики
 - `datasets/data_for_binary.csv` - для определение типа фона
+- `datasets/original_df_for_binary.csv` - оригинальный дасет, но с разметкой для двух классов
 
 В файле `datasets/pandas_to_csv.ipynb` - описано как созданы датасеты
 
